@@ -3,9 +3,9 @@
   become: yes
   become_user: zimbra
   become_method: sudo
-  #become_flags: 'i'
   
   tasks:
 
     - name: zimbra service status
       shell: zmcontrol status
+      become_flags: 'i'

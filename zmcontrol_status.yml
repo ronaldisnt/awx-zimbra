@@ -1,0 +1,11 @@
+---
+- hosts: '{{ zimbra_hosts }}'
+  become: yes
+  become_user: zimbra
+  become_method: sudo
+  become_flags: 'i'
+  
+  tasks:
+
+    - name: zimbra service status
+      shell: zmcontrol status

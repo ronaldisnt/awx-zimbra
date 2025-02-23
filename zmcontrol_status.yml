@@ -1,5 +1,5 @@
 ---
-- hosts: '{{ zimbra_hosts }}'
+- hosts: '{{ zmhostname }}'
   become: yes
   become_user: zimbra
   become_method: sudo
